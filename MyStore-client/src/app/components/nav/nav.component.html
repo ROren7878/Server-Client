@@ -1,0 +1,59 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/primeicons/primeicons.css" />
+
+<div class="header-container">
+    <div class="top-bar">
+        <div class="icons">
+            @if (userIsAdmin) {
+                <div class="icon-wrapper">
+                    <app-admin-options></app-admin-options>
+                </div>   
+            }
+            <div routerLink="cart" class="icon-wrapper">
+                <i class="fas fa-bag-shopping"></i>
+                <span class="badge">{{ cart.length }}</span>
+            </div>
+            <div routerLink="wishlist" class="icon-wrapper">
+                <i class="far fa-heart"></i>
+                <span class="badge">{{ wishlist.length }}</span>
+            </div>
+            <div class="user-menu-wrapper">
+                <!-- אייקון המשתמש -->
+                <div class="icon-wrapper user-icon" (click)="menu.toggle($event)">
+                  <i class="far fa-user"></i>
+                  <span class="username">{{ currentUser?.userName || 'אורח' }}</span>
+                </div>
+              
+                <!-- תפריט קופץ -->
+                <p-menu #menu [popup]="true" [model]="loginItems"></p-menu>
+              </div>
+        </div>
+
+
+        <div class="search">
+            <p-floatlabel variant="on">
+                <p-iconfield>
+                    <p-inputicon class="pi pi-search" />
+                    <input pInputText id="on_label" (input)="onSearch($event)"/><!---->
+                    <!-- <p>{{searchValue}}</p> -->
+                </p-iconfield>
+                <label for="on_label">חיפוש</label>
+            </p-floatlabel>
+        </div>
+        
+        <div class="logo" routerLink="">
+            <img src="/images/whiteLogo.png" alt="velora-logo" />
+        </div>
+    </div>
+    
+    <nav class="main-nav">  
+        <a (click)="goToProductPage('OUTLET')" routerLinkActive="active-link">OUTLET</a>
+        <a (click)="goToProductPage('accessories')" routerLinkActive="active-link">אקססוריז</a> 
+        <a (click)="goToProductPage('skincare')" routerLinkActive="active-link">טיפוח</a>
+        <a (click)="goToProductPage('perfume')" routerLinkActive="active-link">בישום</a>
+        <a (click)="goToProductPage('makeup')" routerLinkActive="active-link">איפור</a>
+    </nav>
+</div>
+
+<router-outlet></router-outlet>

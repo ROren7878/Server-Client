@@ -1,0 +1,35 @@
+
+<div class="sort-container" style="display: flex; align-items: center; gap: 0.5rem; margin: 3rem;" *ngIf="products.length > 0;">
+  <p-dropdown 
+    [options]="sortOptions"
+    [(ngModel)]="selectedSort"
+    (onChange)="onSortChange($event.value)"
+    [style]="{ width: '14rem' , direction: 'rtl'}"
+    [showClear]="false"
+    [editable]="false"
+    placeholder="בחר מיון"
+  >
+  </p-dropdown>
+  <span>מיון לפי</span>
+</div>
+
+<div class="catalog-section">
+
+  <ng-container *ngIf="products.length > 0; else noProducts">
+    <app-product 
+      *ngFor="let product of products" 
+      [currentProduct]="product"
+      (productDeleted)="onProductDeleted($event)"
+    ></app-product>
+  </ng-container>
+
+  <ng-template #noProducts>
+    <p *ngIf="isSearchMode; else categoryEmpty">לא מצאנו מה שחיפשת</p>
+    <ng-template #categoryEmpty>
+      <p>אין מוצרים בקטגוריה זו.</p>
+    </ng-template>
+  </ng-template>
+
+</div>
+
+

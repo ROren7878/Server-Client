@@ -1,0 +1,44 @@
+<!-- <p-toast></p-toast> -->
+ <p-toast>
+  <ng-template let-message pTemplate="message">
+    <div class="p-toast-message-content">
+      <img src="images/{{product.src}}" alt="{{product.productName}}" width="60" style="margin-right:10px" />
+      <div>
+        <div class="p-toast-summary">{{ product.productName }}</div>
+        <div class="p-toast-detail">{{ message.detail }}</div>
+      </div>
+    </div>
+  </ng-template>
+</p-toast>
+
+<div class="page-container">
+    <div class="product-detail">
+        <div class="product-image">
+            <img src="/images/{{product.src}}" alt="{{ product.productName }} {{product.companyName }}">
+        </div>
+
+        <!-- עוטף את הפרטים והכפתורים יחד -->
+        <div class="product-content">
+            <div class="product-info">
+                <div class="product-name">{{ product.productName }}</div>
+                <div class="product-desc">{{ product.desc }}</div>
+                <div class="product-company" (click)="getByCompany(product.companyName)">
+                    {{ product.companyName }}
+                </div>
+                <div class="product-price">{{ product.price | currency: 'ILS' }}</div>
+            </div>
+
+            <!-- הכפתורים נשארים חיצונית לעיצוב אבל בתוך הקונטיינר האנכי -->
+            <div class="product-actions">
+                <button class="add-to-cart" (click)="addToCart()">
+                    <i class="fas fa-shopping-cart"></i> הוספה לסל
+                </button>
+                <button class="add-to-wishlist" (click)="toggleWishlist(product)" [disabled]="!currentUser"
+                    [title]="!currentUser ? 'יש להתחבר כדי להוסיף למועדפים' : ''">
+                    <i [class]="isInWishlist ? 'fas fa-heart' : 'far fa-heart'"
+                       [style.color]="isInWishlist ? 'red' : 'black'"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

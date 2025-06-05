@@ -1,0 +1,15 @@
+
+.title{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.catalog-section {
+  display: flex;
+  padding: 20px 0 40px;
+  align-items: start;
+  margin-right: -30px;
+  margin-left: -30px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

@@ -1,0 +1,9 @@
+<!-- כפתור שפותח תפריט מנהל -->
+
+<!-- תפריט רב-שכבתי סטטי -->
+<div class="admin-container">
+    <p-tieredMenu [model]="menuItems" [popup]="true" #tieredMenu></p-tieredMenu>
+    <div class="admin" (click)="tieredMenu.toggle($event)">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+    </div>
+</div>

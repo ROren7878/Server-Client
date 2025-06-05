@@ -1,0 +1,20 @@
+
+<h2 class="title">המועדפים שלי</h2>
+
+<div class="catalog-section">
+
+  <ng-container *ngIf="wishlist.length > 0; else noProducts">
+    <div *ngFor="let product of wishlist">
+      <app-product [currentProduct]="product"></app-product>
+    </div>
+  </ng-container>
+
+  <ng-template #noProducts>
+    <p>אין מוצרים במועדפים.</p>
+  </ng-template>
+
+</div>
+
+<router-outlet></router-outlet>
+
+

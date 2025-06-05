@@ -1,0 +1,84 @@
+
+<div class="cart-wrapper">
+  <main class="cart-container" *ngIf="cart.length > 0 else emptyCart">
+    <!-- מוצרים בעגלה -->
+    <section class="cart-items" >
+
+      <div class="cart-item" *ngFor="let item of cart">
+        <!-- 1. תמונה -->
+        <div class="item-col item-image" routerLink="/product-details/{{item.product.id}}">
+          <img [src]="'/images/' + item.product.src" alt="{{ item.product.productName }}">
+        </div>
+
+        <!-- 2. שם המוצר -->
+        <div class="item-col item-name" routerLink="/product-details/{{item.product.id}}">
+          <div class="title">{{ item.product.productName }}</div>
+        </div>
+
+        <!-- 3. מחיר ליחידה -->
+        <div class="item-col item-unit-price">
+          {{ item.product.price | currency:'ILS' }}
+        </div>
+
+        <!-- 4. בחירת כמות -->
+        <div class="item-col item-qty">
+          <button (click)="minus(item)">−</button>
+          <input type="number" [value]="item.quantity" readonly>
+          <button (click)="plus(item)">+</button>
+        </div>
+
+        <!-- 5. סכום כולל -->
+        <div class="item-col item-total">
+          {{ item.product.price * item.quantity | currency:'ILS' }}
+        </div>
+
+        <!-- 6. אייקון הסרה -->
+        <div class="item-col item-remove">
+          <button class="delete-btn" title="הסר מהסל" (click)="removeFromCart(item)">
+            <i class="pi pi-trash"></i>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="cart-summary">
+      <h2>סיכום הזמנה</h2>
+
+      <div class="summary-line">
+        <span>סכום ביניים:</span>
+        <span>{{ totalSum | currency:'ILS' }}</span>
+      </div>
+
+      <div class="summary-line total">
+        <span>סה"כ לתשלום:</span>
+        <span>{{ totalSum | currency:'ILS' }}</span>
+      </div>
+
+      <div class="coupon">
+        <input type="text" placeholder="קוד קופון">
+        <button>החל</button>
+      </div>
+
+      <div *ngIf="!isUser" class="login-hint">
+        <p routerLink="/login">התחברי כדי לבצע הזמנה</p>
+      </div>
+
+      <button class="checkout-btn" (click)="checkout()" routerLink="/pay" [disabled]="!isUser">לתשלום</button>
+      <a routerLink="/" class="back-to-shop">← המשך בקנייה</a>
+    </section>
+
+  </main>    
+  <!-- פה יוצגו ההזמנות הקודמות של הלקוח -->
+  <app-orders></app-orders>
+
+  <ng-template #emptyCart>
+    <div class="empty-cart" style="align-items: center;">
+      <p>העגלה שלך ריקה.</p>
+      <a routerLink="/" class="back-home">← חזרה לחנות</a>
+    </div>
+  </ng-template>
+
+</div>
+
+<router-outlet></router-outlet>

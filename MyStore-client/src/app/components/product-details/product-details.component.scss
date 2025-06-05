@@ -1,0 +1,115 @@
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    direction: rtl;
+
+    .product-detail {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 3rem;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+
+    .product-image img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .product-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between;
+
+        .product-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            .product-name {
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 1rem;
+            }
+
+            .product-desc {
+                font-size: 1.2rem;
+                color: #555;
+                margin-bottom: 0.8rem;
+            }
+            .product-company {
+                font-size: 1rem;
+                color:gray;
+                margin-bottom: 1rem;
+                cursor: pointer;
+                transition: color 0.3s;
+                &:hover {
+                    color: #455a64;
+                    text-decoration: underline;
+                }
+            }
+            .product-price {
+                font-size: 1.8rem;
+                color: #b598a9;
+                font-weight: bold;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .product-actions {
+        display: flex;
+        gap: 1rem;
+
+        .add-to-cart {
+            display: block;
+            width: 350px;
+            text-align: center;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 30px;
+            padding: 12px 10px;
+            font-size: 17px;
+            line-height: .9;
+            background-color: white;
+            &:hover{
+                background-color: #000;
+                color:white;
+            }
+            .fas {
+                line-height: 1;
+                padding: 4px;
+            }
+            .fa-shopping-cart:before {
+                content: "\f07a";
+            }
+        }
+        .add-to-wishlist{
+            border: none;
+            background: none transparent;
+            .fa-heart{
+                font-size: 25px;
+                cursor: pointer;
+            }
+        }
+        i {
+            margin-left: 0.5rem;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .product-detail {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-image img {
+        max-width: 90%;
+    }
+}

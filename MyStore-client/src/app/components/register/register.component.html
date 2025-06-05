@@ -1,0 +1,104 @@
+<p-toast></p-toast>
+
+<!-- <p-button (click)="showDialog()" label="Show" /> -->
+<p-dialog header="{{currentUser?'עריכת פרופיל ':'הרשמי'}}" [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
+    <form (ngSubmit)="registerSubmit()" #registerForm="ngForm" class="form">
+        <p-floatlabel variant="on">
+            <p-autocomplete 
+                #usernameField="ngModel"
+                inputId="username" 
+                name="username"
+                [(ngModel)]="user.userName"
+                required
+                pattern="^[A-Za-z\u0590-\u05FF\s]+$"
+                />
+            <label for="on_label">שם</label>
+            @if(usernameField.invalid && usernameField.touched){
+                @if(usernameField.errors?.['required']){
+                    <div class="error">שדה חובה</div>
+                }
+                @if(usernameField.errors?.['pattern']){
+                <div class="error">שם משתמש חייב להכיל רק אותיות</div>
+                }
+            }
+        </p-floatlabel>
+
+        <p-floatlabel variant="on">
+            <p-autocomplete 
+            #phoneField="ngModel"
+            inputId="phone" 
+            name="phone"
+            [(ngModel)]="user.phone"
+            pattern="^[0-9]+$"
+            minlength="7"
+            maxlength="10"
+            />
+            <label for="on_label">טלפון</label>
+            @if(phoneField.invalid){
+                <div class="error">מספר לא חוקי</div>
+            }
+        </p-floatlabel>
+
+        <p-floatlabel variant="on">
+            <p-autocomplete 
+            #emailField="ngModel"
+            inputId="email"
+            name="email"
+            [(ngModel)]="user.Email"
+            required
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            />
+            <label for="on_label">Email</label>
+            @if(emailField.invalid && emailField.touched){
+                @if(emailField.errors?.['required']){
+                    <div class="error">שדה חובה</div>
+                }
+                @if(emailField.errors?.['pattern']){
+                    <div class="error">כתובת מייל לא חוקית</div>
+                }
+
+            }
+        </p-floatlabel>
+
+        <hr>
+
+        <p-floatlabel variant="on">
+            <p-autocomplete  
+            inputId="city" 
+            #cityField="ngModel"
+            name="city"
+            [(ngModel)]="user.city"
+            pattern="^[A-Za-z\u0590-\u05FF\s]+$"
+            />
+            <label for="on_label">עיר</label>
+        </p-floatlabel>
+        <p-floatlabel variant="on">
+            <p-autocomplete  
+            inputId="street" 
+            #streetField="ngModel"
+            name="street"
+            [(ngModel)]="user.street"/>
+            <label for="on_label">רחוב</label>
+        </p-floatlabel>
+        <p-floatlabel variant="on">
+            <p-autocomplete  
+            inputId="housenumber" 
+            #houseNumberField="ngModel"
+            name="house"
+            [(ngModel)]="user.house"
+            pattern="^[0-9]+$"
+            />
+            <label for="on_label">מספר בית</label>
+        </p-floatlabel>
+
+        @if(userIsFound){
+            <p>משתמש קיים</p>
+        }
+
+        @if (!currentUser) {
+            <p [ngClass]="{'highlight': userIsFound}" >כבר יש לך חשבון? <a routerLink="/login">כניסה</a></p>
+        }
+        
+        <p-button label="{{currentUser?'שמירת שינויים':'הרשמה'}}" [disabled]="registerForm.invalid" type="submit"/>
+    </form>
+</p-dialog>

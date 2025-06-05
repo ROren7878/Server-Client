@@ -1,0 +1,84 @@
+.edit-container {
+  max-width: 500px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  direction: rtl;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #37474f;
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #455a64;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 0.6rem 0.9rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    &:focus {
+      border-color: #9e8695;
+      outline: none;
+    }
+  }
+
+  .item-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .p-radiobutton {
+    margin-left: 0.5rem;
+  }
+  .p-radiobutton + label {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  div[ng-reflect-ng-for-of] {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  button[pButton] {
+    background-color: #9e8695;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover{
+      background-color: #8f7182;
+    }
+    &:disabled{
+      background-color: #77395d60;
+      cursor: not-allowed;
+    }
+  }
+
+}
+
+
+

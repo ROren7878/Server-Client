@@ -1,0 +1,51 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- קישורים -->
+    <div class="footer-links">
+      <h4>קישורים שימושיים</h4>
+      <ul>
+        <li><a href="/"> דף הבית</a></li>
+        <li><a href="/login">התחברות / הרשמה</a></li>
+        <li><a href="/profile"> עריכת פרופיל</a></li>
+        <li><a href="/orders"> הזמנות</a></li>
+        <li><a href="/wishlist"> מועדפים</a></li>
+        <li><a [routerLink]="['/products']" [queryParams]="{ category: 'OUTLET' }"> OUTLET</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+        <h4>קטגוריות לחיפוש</h4>
+        <ul>
+            <li><a [routerLink]="['/products']">כל המוצרים</a></li>
+            <li><a [routerLink]="['/products']" [queryParams]="{ subcategory: 'שפתיים' }">שפתיים</a></li>
+            <li><a [routerLink]="['/products']" [queryParams]="{ subcategory: 'עיניים' }">עיניים</a></li>
+            <li><a [routerLink]="['/products']" [queryParams]="{ subcategory: 'פנים' }">פנים</a></li>
+            <li><a [routerLink]="['/products']" [queryParams]="{ subcategory: 'מברשות איפור' }">מברשות איפור</a></li>
+        </ul>
+    </div>
+
+    <!-- טופס שליחת מייל -->
+    <div class="footer-form">
+      <h4>הצטרפות לרשימת דיוור</h4>
+      <form>
+        <input type="email" placeholder="הכנס כתובת מייל" required>
+        <button type="submit"><i class="fas fa-paper-plane"></i> שלח</button>
+      </form>
+    </div>
+
+    <!-- אייקונים של מדיה -->
+    <div class="footer-social">
+      <h4>עקבו אחרינו</h4>
+      <div class="social-icons">
+        <!-- Font Awesome version -->
+        <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-lg"></i></a> 
+      </div>
+    </div>
+      
+    <!-- לוגו -->
+    <div class="footer-logo" [routerLink]="['']">
+        <img src="images/blackLogo.png" alt="VELORA Cosmetic Logo">
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,35 @@
+
+<!-- <p-button (click)="showDialog()" label="Show" /> -->
+<p-dialog header="התחברי" [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
+    <form class="form" [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+        <p-floatlabel variant="on">
+            <p-autocomplete  inputId="username" formControlName="username"/>
+            <!--[(ngModel)]="value3" [suggestions]="items" (completeMethod)="search($event)"-->
+            <label for="on_label">Username</label>
+            @if(loginForm.get('username')?.hasError('required') && loginForm.get('username')?.touched){
+                <p-message severity="error" variant="simple" size="small">Username is required</p-message>
+            }
+        </p-floatlabel>
+
+        <p-floatlabel variant="on">
+  
+
+        <input type="text" pInputText id="email"  type="email" placeholder="Email" [fluid]="true" formControlName="email"/>
+        <!-- <p>{{}}</p> -->
+
+            @if(loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched){
+                <p-message severity="error" variant="simple" size="small">Email is required</p-message>
+            }
+            @if(loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched){
+                <p-message severity="error" variant="simple" size="small">Email is not valid</p-message>
+            }
+        </p-floatlabel>
+
+        @if(userNotFound){
+            <p>משתמש לא קיים</p>
+        }
+        <p [ngClass]="{'highlight': userNotFound}">אין לך חשבון? <a routerLink="/register">הרשמי עכשיו</a></p>
+
+        <p-button label="כניסה" type="submit" [disabled]="loginForm.invalid"/>
+    </form>
+</p-dialog>

@@ -1,0 +1,56 @@
+<p-toast></p-toast>
+
+<h2>{{ isEditMode ? 'עריכת מוצר' : 'הוספת מוצר' }}</h2>
+
+<form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+  <div>
+    <label>שם המוצר:</label>
+    <input type="text" formControlName="productName" />
+  </div>
+
+  <div>
+    <label>תיאור:</label>
+    <textarea formControlName="desc"></textarea>
+  </div>
+
+  <div>
+    <label>מחיר:</label>
+    <input type="number" formControlName="price" />
+  </div>
+
+  <div>
+    <label>כמות במלאי:</label>
+    <input type="number" formControlName="quantity" />
+  </div>
+
+  <div>
+    <label>קטגוריה:</label>
+    <select formControlName="categoryId">
+      <option value="" disabled>בחר קטגוריה</option>
+      <option *ngFor="let c of categories" [value]="c.id">{{ c.name }}</option>
+    </select>
+  </div>
+
+  <div>
+    <label>תת-קטגוריה:</label>
+    <select formControlName="subCategoryId">
+      <option value="" disabled>בחר תת-קטגוריה</option>
+      <option *ngFor="let sc of subcategories" [value]="sc.id">{{ sc.name }}</option>
+    </select>
+  </div>
+
+  <div>
+    <label>חברה:</label>
+    <select formControlName="companyId">
+      <option value="" disabled>בחר חברה</option>
+      <option *ngFor="let c of companies" [value]="c.id">{{ c.name }}</option>
+    </select>
+  </div>
+
+  <div>
+    <label>תמונה (src):</label>
+    <input type="text" formControlName="src" />
+  </div>
+
+  <button type="submit" [disabled]="productForm.invalid">{{ isEditMode ? 'עדכן' : 'הוסף' }}</button>
+</form>

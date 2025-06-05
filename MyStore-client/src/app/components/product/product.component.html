@@ -1,0 +1,59 @@
+<div class="product-block product-block-cat">
+    <div class="product-wrapper">    
+        @if (!userIsAdmin) {
+            <button class="wishlist" (click)="toggleWishlist()" [disabled]="!currentUser" [title]="!currentUser ? 'יש להתחבר כדי להוסיף למועדפים' : ''">
+                <i  
+                    [class]="isInWishlist ? 'fas fa-heart' : 'far fa-heart'" 
+                    [style.color]="isInWishlist ? 'red' : 'black'"
+                ></i>
+            </button> 
+        }
+
+        <a (click)="productDetails()" class="product-image">
+            <img src="/images/{{currentProduct.src}}"
+                alt="{{ currentProduct.productName }} {{currentProduct.companyName}}">
+        </a>
+        <div class="product-name" (click)="productDetails()">    {{ currentProduct.productName }}   </div>
+        <div class="product-company" (click)="getByCompany(currentProduct.companyName)">{{ currentProduct.companyName }}</div>
+        <div class="product-price">
+            <div class="product-new">{{ currentProduct.price | currency: 'ILS' }} </div>
+        </div>
+         @if (!userIsAdmin) {
+            <button href="" class="product-cart" (click)="productDetails()">
+                <span >לרכישה</span>
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+        }
+        @if(userIsAdmin){
+            <div class="admin-buttons">
+                <p-toast></p-toast>
+                <p-confirmpopup></p-confirmpopup>
+
+                <p-button 
+                    label="Delete"
+                    (onClick)="confirm2($event)"
+                    styleClass="delete-product"
+                >
+                    <ng-template pTemplate="content">
+                    <i class="fa-solid fa-trash"></i> 
+                    </ng-template>
+                </p-button>
+
+                <p-button 
+                    label="Update"
+                    (click)="updateProduct()"
+                    styleClass="update-product"
+                >
+                    <ng-template pTemplate="content">
+                    <i class="fa-solid fa-pencil"></i> 
+                    </ng-template>
+                </p-button>
+            </div>
+            <div class="show-qty">
+                <p [ngStyle]="{'color': currentProduct.quantity == 0 ? 'red' : 'black'}">כמות במלאי: {{ currentProduct.quantity }}</p>
+            </div>
+        }
+        
+    </div>
+</div>
+

@@ -1,0 +1,43 @@
+<p-toast></p-toast>
+
+<div class="edit-container">
+    <h2>
+      {{ action === 'add' ? 'הוספת' : action === 'edit' ? 'עריכת' : 'מחיקת' }}
+      {{ entity === 'category' ? 'קטגוריה' 
+         : entity === 'subcategory' ? 'תת קטגוריה' 
+         : 'חברה' }}
+    </h2>
+  
+    <!-- רשימת RadioButtons לעריכה/מחיקה -->
+    <div *ngIf="action !== 'add'">
+      <label>בחר {{ entity === 'category' ? 'קטגוריה' 
+               : entity === 'subcategory' ? 'תת קטגוריה' 
+               : 'חברה' }}:</label>
+      <div *ngFor="let item of items" class="item-row">
+        <p-radioButton 
+          name="selectedItem" 
+          inputId="item{{item.id}}" 
+          [value]="item.id" 
+          [(ngModel)]="selectedId">
+        </p-radioButton>
+        <label [for]="'item' + item.id">{{ item.name }}</label>
+      </div>
+    </div>
+  
+    <!-- שדה להזנת השם (add / edit) -->
+    <div *ngIf="action !== 'delete'">
+      <label>שם חדש:</label>
+      <input type="text" [(ngModel)]="name" placeholder="הזן שם" />
+    </div>
+
+    <p style="text-align: center; padding: 0; margin: 0;" *ngIf="!selectedId && action != 'add'">יש לבחור מהרשימה</p>
+  
+    <!-- כפתור פעולה -->
+    <!-- אנגולר לא תומך ב־interpolation בתוך attribute של PrimeNG button, לכן משתמשים ב־innerText -->
+    <button pButton type="button" (click)="onSubmit()" [disabled]="!selectedId && action !== 'add'">
+      {{ action === 'add' ? 'הוסף' 
+       : action === 'edit' ? 'שמור שינויים' 
+       : 'מחק' }}
+    </button>
+  </div>
+  

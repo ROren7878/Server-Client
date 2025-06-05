@@ -1,0 +1,14 @@
+
+<div class="container">
+   <h2 class="orders-title">ההזמנות הקודמות שלך</h2>
+   <p *ngIf="orders.length == 0">אין לך הזמנות קודמות</p>
+
+
+    <div class="order-grid" *ngIf="orders">
+        <div *ngFor="let order of orders;" class="order-card">
+            <div class="order-total">{{ order.orderSum | currency: 'ILS' }}</div>
+            <div class="order-date">{{ order.orderDate | date : 'dd/MM/yy HH:mm' }}</div>
+        </div>
+    </div> 
+</div>
+

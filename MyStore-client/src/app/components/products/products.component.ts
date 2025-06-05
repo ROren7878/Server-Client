@@ -157,7 +157,7 @@ export class ProductsComponent implements OnInit{
         this.sortByPrice(value);
         break;
       case 'quantity':
-        this.products = this.products.sort((a, b) => b.quantity - a.quantity); // לפי כמות מהמלאי הרבה לפחות
+        this.products = this.products.sort((a, b) => a.quantity - b.quantity); // לפי כמות מהמלאי הרבה לפחות
         break;
     }
   }
@@ -169,9 +169,12 @@ export class ProductsComponent implements OnInit{
       this.products = this.products.sort( (p1, p2) => p2.price - p1.price);
   }
 
-  filterByOutOfStock(): Product[]{
-    this.products = this.allProducts.filter(p => p.quantity ==0)
-    return this.products;
+  filterByOutOfStock(){
+    // this.products = this.allProducts.filter(p => p.quantity == 0)
+    // return this.products;
+    this.productService.getNoQuantityProducts().subscribe(data => {
+      this.products = data;
+    })
   }
 
   sortByQuantity(): Product[]{

@@ -82,7 +82,6 @@ namespace API.Controllers
         }
 
         // PUT api/Product/5
-        [Authorize]
         [HttpPut("{id:int}")]
         public async Task Put([FromBody] ProductDTO product, int id)
         {

@@ -57,16 +57,16 @@ export class CartComponent implements OnInit{
       this.orderService.addOrder(this.order).subscribe({});
       for (let i = 0; i < this.cart.length; i++) {
         const product = this.cart[i].product;
-        product.quantity = this.cart[i].quantity;
-        this.cartService.clearCart();
+        product.quantity = this.cart[i].quantity;      
         this.productService.updateProduct(product.id, product).subscribe({
           next:()=>console.log(),
-          error: err => console.error(err)
+          error: err => console.error("err",err)
         })
       }
     }
     else
      this.isUser = false; 
+    this.cartService.clearCart();
   }
 
   removeFromCart(item: CartItem): void {

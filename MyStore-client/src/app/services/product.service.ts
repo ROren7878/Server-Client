@@ -38,7 +38,15 @@ export class ProductService {
   }
 
   getNoQuantityProducts():Observable<Product[]> {
-    return this.http.get<Array<Product>>(`${this.URL}/noQuantity`);
+    const token = localStorage.getItem('token');
+    const role = localStorage.getItem('role');
+    if (token && role === 'manager') {
+      const headers = new HttpHeaders({ 'Authorization': `Bearer ${token}` });
+    return this.http.get<Array<Product>>(`${this.URL}/noQuantity`, { headers });
+    }
+    return new Observable<Product[]>(observer => {
+      observer.error('Unauthorized');
+    });
   }
 
   addProduct(newProduct:Product):Observable<void> {
@@ -54,16 +62,7 @@ export class ProductService {
   }
 
   updateProduct(id:number, newProduct:Product):Observable<void> {
-    const token = localStorage.getItem('token');
-    const role = localStorage.getItem('role');
-    if (token && role === 'manager') {
-      const headers = new HttpHeaders({ 'Authorization': `Bearer ${token}` });
-      return this.http.put<void>(`${this.URL}/${id}`, newProduct, { headers });
-    }
-    return new Observable<void>(observer => {
-      observer.error('Unauthorized');
-    });
-    
+    return this.http.put<void>(`${this.URL}/${id}`, newProduct);
   }
 
   deleteProduct(id:number):Observable<void> {

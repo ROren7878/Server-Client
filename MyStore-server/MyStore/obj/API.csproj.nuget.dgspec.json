@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\פרויקט אנגולר\\server\\MyStore\\MyStore\\API.csproj": {}
+    "D:\\API & ANGULAR\\MyStore-server\\MyStore\\API.csproj": {}
   },
   "projects": {
-    "D:\\פרויקט אנגולר\\server\\MyStore\\Core\\Core.csproj": {
+    "D:\\API & ANGULAR\\MyStore-server\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\פרויקט אנגולר\\server\\MyStore\\Core\\Core.csproj",
+        "projectUniqueName": "D:\\API & ANGULAR\\MyStore-server\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\פרויקט אנגולר\\server\\MyStore\\Core\\Core.csproj",
+        "projectPath": "D:\\API & ANGULAR\\MyStore-server\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\keple\\.nuget\\packages\\",
-        "outputPath": "D:\\פרויקט אנגולר\\server\\MyStore\\Core\\obj\\",
+        "outputPath": "D:\\API & ANGULAR\\MyStore-server\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -74,14 +74,14 @@
         }
       }
     },
-    "D:\\פרויקט אנגולר\\server\\MyStore\\Data\\Data.csproj": {
+    "D:\\API & ANGULAR\\MyStore-server\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\פרויקט אנגולר\\server\\MyStore\\Data\\Data.csproj",
+        "projectUniqueName": "D:\\API & ANGULAR\\MyStore-server\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "D:\\פרויקט אנגולר\\server\\MyStore\\Data\\Data.csproj",
+        "projectPath": "D:\\API & ANGULAR\\MyStore-server\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\keple\\.nuget\\packages\\",
-        "outputPath": "D:\\פרויקט אנגולר\\server\\MyStore\\Data\\obj\\",
+        "outputPath": "D:\\API & ANGULAR\\MyStore-server\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -102,8 +102,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\פרויקט אנגולר\\server\\MyStore\\Core\\Core.csproj": {
-                "projectPath": "D:\\פרויקט אנגולר\\server\\MyStore\\Core\\Core.csproj"
+              "D:\\API & ANGULAR\\MyStore-server\\Core\\Core.csproj": {
+                "projectPath": "D:\\API & ANGULAR\\MyStore-server\\Core\\Core.csproj"
               }
             }
           }
@@ -154,14 +154,14 @@
         }
       }
     },
-    "D:\\פרויקט אנגולר\\server\\MyStore\\MyStore\\API.csproj": {
+    "D:\\API & ANGULAR\\MyStore-server\\MyStore\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\פרויקט אנגולר\\server\\MyStore\\MyStore\\API.csproj",
+        "projectUniqueName": "D:\\API & ANGULAR\\MyStore-server\\MyStore\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\פרויקט אנגולר\\server\\MyStore\\MyStore\\API.csproj",
+        "projectPath": "D:\\API & ANGULAR\\MyStore-server\\MyStore\\API.csproj",
         "packagesPath": "C:\\Users\\keple\\.nuget\\packages\\",
-        "outputPath": "D:\\פרויקט אנגולר\\server\\MyStore\\MyStore\\obj\\",
+        "outputPath": "D:\\API & ANGULAR\\MyStore-server\\MyStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -182,11 +182,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\פרויקט אנגולר\\server\\MyStore\\Data\\Data.csproj": {
-                "projectPath": "D:\\פרויקט אנגולר\\server\\MyStore\\Data\\Data.csproj"
+              "D:\\API & ANGULAR\\MyStore-server\\Data\\Data.csproj": {
+                "projectPath": "D:\\API & ANGULAR\\MyStore-server\\Data\\Data.csproj"
               },
-              "D:\\פרויקט אנגולר\\server\\MyStore\\Service\\Service.csproj": {
-                "projectPath": "D:\\פרויקט אנגולר\\server\\MyStore\\Service\\Service.csproj"
+              "D:\\API & ANGULAR\\MyStore-server\\Service\\Service.csproj": {
+                "projectPath": "D:\\API & ANGULAR\\MyStore-server\\Service\\Service.csproj"
               }
             }
           }
@@ -260,14 +260,14 @@
         }
       }
     },
-    "D:\\פרויקט אנגולר\\server\\MyStore\\Service\\Service.csproj": {
+    "D:\\API & ANGULAR\\MyStore-server\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\פרויקט אנגולר\\server\\MyStore\\Service\\Service.csproj",
+        "projectUniqueName": "D:\\API & ANGULAR\\MyStore-server\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "D:\\פרויקט אנגולר\\server\\MyStore\\Service\\Service.csproj",
+        "projectPath": "D:\\API & ANGULAR\\MyStore-server\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\keple\\.nuget\\packages\\",
-        "outputPath": "D:\\פרויקט אנגולר\\server\\MyStore\\Service\\obj\\",
+        "outputPath": "D:\\API & ANGULAR\\MyStore-server\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -288,8 +288,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\פרויקט אנגולר\\server\\MyStore\\Core\\Core.csproj": {
-                "projectPath": "D:\\פרויקט אנגולר\\server\\MyStore\\Core\\Core.csproj"
+              "D:\\API & ANGULAR\\MyStore-server\\Core\\Core.csproj": {
+                "projectPath": "D:\\API & ANGULAR\\MyStore-server\\Core\\Core.csproj"
               }
             }
           }

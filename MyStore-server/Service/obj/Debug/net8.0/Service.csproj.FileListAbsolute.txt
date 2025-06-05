@@ -43,3 +43,19 @@ D:\פרויקט אנגולר\server\MyStore\Service\obj\Debug\net8.0\Service.dll
 D:\פרויקט אנגולר\server\MyStore\Service\obj\Debug\net8.0\refint\Service.dll
 D:\פרויקט אנגולר\server\MyStore\Service\obj\Debug\net8.0\Service.pdb
 D:\פרויקט אנגולר\server\MyStore\Service\obj\Debug\net8.0\ref\Service.dll
+D:\API & ANGULAR\MyStore-server\Service\bin\Debug\net8.0\Service.deps.json
+D:\API & ANGULAR\MyStore-server\Service\bin\Debug\net8.0\Service.dll
+D:\API & ANGULAR\MyStore-server\Service\bin\Debug\net8.0\Service.pdb
+D:\API & ANGULAR\MyStore-server\Service\bin\Debug\net8.0\Core.dll
+D:\API & ANGULAR\MyStore-server\Service\bin\Debug\net8.0\Core.pdb
+D:\API & ANGULAR\MyStore-server\Service\obj\Debug\net8.0\Service.csproj.AssemblyReference.cache
+D:\API & ANGULAR\MyStore-server\Service\obj\Debug\net8.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\API & ANGULAR\MyStore-server\Service\obj\Debug\net8.0\Service.AssemblyInfoInputs.cache
+D:\API & ANGULAR\MyStore-server\Service\obj\Debug\net8.0\Service.AssemblyInfo.cs
+D:\API & ANGULAR\MyStore-server\Service\obj\Debug\net8.0\Service.csproj.CoreCompileInputs.cache
+D:\API & ANGULAR\MyStore-server\Service\obj\Debug\net8.0\Service.sourcelink.json
+D:\API & ANGULAR\MyStore-server\Service\obj\Debug\net8.0\Service.csproj.Up2Date
+D:\API & ANGULAR\MyStore-server\Service\obj\Debug\net8.0\Service.dll
+D:\API & ANGULAR\MyStore-server\Service\obj\Debug\net8.0\refint\Service.dll
+D:\API & ANGULAR\MyStore-server\Service\obj\Debug\net8.0\Service.pdb
+D:\API & ANGULAR\MyStore-server\Service\obj\Debug\net8.0\ref\Service.dll

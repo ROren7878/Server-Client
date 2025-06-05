@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I9KLKEoyzzIvo0Ve7WcpxN0CYTEZgzmNFEOyRSRwSHNEob5RVhcT9b/EuDER6H7IzppvXGf98SLq5zH2doT7TQ==",
+  "dgSpecHash": "KFk5OEKPLhgkzp5qT0jc+XFzIhWjOKFc5L9q+Q6CGmYPV6RCLNQfUVW2Jzrt8dIIoddv2L4UcqLRJpMa0NVl2w==",
   "success": true,
-  "projectFilePath": "D:\\פרויקט אנגולר\\server\\MyStore\\Service\\Service.csproj",
+  "projectFilePath": "D:\\API & ANGULAR\\MyStore-server\\Service\\Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\keple\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\keple\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"

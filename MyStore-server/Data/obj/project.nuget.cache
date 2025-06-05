@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Aj6YJ9xhOQKDcC0ZyykalbLFf2YfWxutcr4trkM/HPCpqe4TqZAtKBCrAxFO5XMjjprn0kirY0V4jqTRPpb4Mw==",
+  "dgSpecHash": "UBTN328X3QtsiY3zWLxy0WvtMGK26f/g2xKLbRk8QyPKzYldGRTaQm3afsPy2sIqbqiwMYurzRYrpY4gpSDJag==",
   "success": true,
-  "projectFilePath": "D:\\פרויקט אנגולר\\server\\MyStore\\Data\\Data.csproj",
+  "projectFilePath": "D:\\API & ANGULAR\\MyStore-server\\Data\\Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\keple\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\keple\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",

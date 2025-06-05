@@ -1,0 +1,15 @@
+# Angular (client)
+MyStore-client/node_modules/
+MyStore-client/dist/
+MyStore-client/.angular/
+
+# .NET (server)
+MyStore-server/bin/
+MyStore-server/obj/
+MyStore-server/.vs/
+
+# מערכת
+*.user
+*.suo
+.DS_Store
+Thumbs.db

@@ -28,24 +28,18 @@
             <div class="admin-buttons">
                 <p-toast></p-toast>
                 <p-confirmpopup></p-confirmpopup>
-
                 <p-button 
-                    label="Delete"
-                    (onClick)="confirm2($event)"
-                    styleClass="delete-product"
-                >
+                    styleClass="icon-only-btn delete-product"
+                    (onClick)="confirm2($event)">
                     <ng-template pTemplate="content">
-                    <i class="fa-solid fa-trash"></i> 
+                        <i class="fa-solid fa-trash"></i> 
                     </ng-template>
                 </p-button>
-
                 <p-button 
-                    label="Update"
-                    (click)="updateProduct()"
-                    styleClass="update-product"
-                >
+                    styleClass="icon-only-btn update-product"
+                    (click)="updateProduct()">
                     <ng-template pTemplate="content">
-                    <i class="fa-solid fa-pencil"></i> 
+                        <i class="fa-solid fa-pencil"></i> 
                     </ng-template>
                 </p-button>
             </div>

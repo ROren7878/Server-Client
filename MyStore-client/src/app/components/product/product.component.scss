@@ -184,3 +184,25 @@
 ::ng-deep .p-button.update-product i {
   font-size: 20px;
 }
+
+// עיצוב כפתורי איקון בלבד (ללא מסגרת/רקע/טקסט)
+::ng-deep .p-button.icon-only-btn {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: black !important;
+  width: auto !important;
+  padding: 0.5rem !important;
+  margin: 0 8px !important;
+  min-width: unset !important;
+}
+::ng-deep .p-button.icon-only-btn .p-button-label {
+  display: none !important;
+}
+::ng-deep .p-button.icon-only-btn i {
+  font-size: 22px;
+  color: black;
+}
+// ::ng-deep .p-button.icon-only-btn:hover i {
+//   color: #d32f2f !important;
+// }
